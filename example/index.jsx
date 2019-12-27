@@ -11,9 +11,11 @@ function render(Component) {
   );
 }
 
-render(require('./src/Demo'));
+render(require('./src/Parley'));
+// render(require('./src/Demo'));
 
 // Webpack Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./src/Demo', () => render(require('./src/Demo'))); // eslint-disable-line global-require
+  module.hot.accept('./src/Parley', () => render(require('./src/Parley'))); // eslint-disable-line global-require
+  // module.hot.accept('./src/Demo', () => render(require('./src/Demo'))); // eslint-disable-line global-require
 }

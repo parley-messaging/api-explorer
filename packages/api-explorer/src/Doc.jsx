@@ -32,6 +32,7 @@ class Doc extends React.Component {
       needsAuth: false,
       result: null,
       showEndpoint: false,
+      showResponseSchema: false,
     };
 
     this.onChange = this.onChange.bind(this);
@@ -213,6 +214,9 @@ class Doc extends React.Component {
   }
 
   renderResponseSchema(theme = 'light') {
+    if (!this.state.showResponseSchema)
+      return null;
+
     const operation = this.getOperation();
 
     return (

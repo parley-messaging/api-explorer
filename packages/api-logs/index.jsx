@@ -30,8 +30,8 @@ const LoadingSvg = props => (
 );
 
 function getLanguage(log) {
-  const header = log.requestHeaders.find(e => e.name.toLowerCase() === 'user-agent');
-  if (header) return header.value;
+  // const header = log.requestHeaders.find(e => e.name.toLowerCase() === 'user-agent');
+  // if (header) return header.value;
   return '-';
 }
 

@@ -20,6 +20,13 @@ function withSpecFetching(Component) {
       this.updateStatus = this.updateStatus.bind(this);
     }
 
+    componentDidMount() {
+      // If we dont execute this twice, the api explorer will only load partially
+      // Maybe it has something to do with the timing of `componentDidMount()`
+      this.fetchSwagger("swagger-files\\parley-client-api.json");
+      this.fetchSwagger("swagger-files\\parley-client-api.json");
+    }
+
     updateStatus(status, next) {
       this.setState(prev => ({ status: [...prev.status, status] }), next);
     }
