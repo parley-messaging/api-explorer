@@ -1,6 +1,6 @@
-rm -rf example/dist
-mkdir example/dist
-mkdir example/dist/reference
+rm -rf example/dist/*
+mkdir -p example/dist
+mkdir -p example/dist/reference
 
 webpack --config webpack.prod.js
 

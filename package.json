@@ -3,7 +3,7 @@
   "description": "Open source components that make up ReadMe&#39;s API explorer",
   "version": "0.0.0",
   "scripts": {
-    "build": "./build.sh & lerna run build",
+    "build": "./build.sh && lerna run build",
     "deploy": "gh-pages --dotfiles -d example/dist",
     "lint": "eslint example --ext js --ext jsx",
     "publish": "lerna publish",

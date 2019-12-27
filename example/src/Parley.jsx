@@ -40,7 +40,7 @@ function Demo({ status, docs, oas, oauth }) {
         suggestedEdits={false}
         variables={{
           // Uncomment this to test without logs
-          // user: {}
+          user: {},
           // Uncomment this to test with logs
           // user: {
           //   keys: [
@@ -50,12 +50,6 @@ function Demo({ status, docs, oas, oauth }) {
           // },
           // Uncomment this to test without keys array
           // user: { user: '123456', pass: 'abc', apiKey: '123456' },
-          user: {
-            keys: [
-              { id: 'asdfghjkl', name: 'project1', apiKey: '123', user: 'user1', pass: 'pass1' },
-              { id: 'zxcvbnm', name: 'project2', apiKey: '456', user: 'user2', pass: 'pass2' },
-            ],
-          },
           defaults: [],
         }}
       />

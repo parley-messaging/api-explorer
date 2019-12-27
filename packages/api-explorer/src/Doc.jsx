@@ -214,8 +214,7 @@ class Doc extends React.Component {
   }
 
   renderResponseSchema(theme = 'light') {
-    if (!this.state.showResponseSchema)
-      return null;
+    if (!this.state.showResponseSchema) return null;
 
     const operation = this.getOperation();
 
