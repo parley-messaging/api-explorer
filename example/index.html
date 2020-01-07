@@ -18,5 +18,40 @@
 <body>
   <section id="hub-content"></section>
   <script src="example/demo-bundle.js"></script>
+
+  <script>
+    function findGetParameter(parameterName) {
+      var result = null,
+              tmp = [];
+      location.search
+              .substr(1)
+              .split("&")
+              .forEach(function (item) {
+                tmp = item.split("=");
+                if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+              });
+      return result;
+    }
+
+    // Scrolls to element by ID (ID is supplied in get param)
+    document.addEventListener("DOMContentLoaded", function(event) {
+      let scrollTo = findGetParameter('scrollTo');
+      if(!scrollTo)
+        return;
+
+      let checkExist = setInterval(function() {
+        // Wait until the Response Example is loaded
+        if (document.querySelectorAll("#" + scrollTo).length > 0) {
+          clearInterval(checkExist);
+
+          let element = document.getElementById(scrollTo);
+          if(!element)
+            return;
+
+          element.scrollIntoView();
+        }
+      }, 100);
+    });
+  </script>
 </body>
 </html>
