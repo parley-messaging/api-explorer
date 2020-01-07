@@ -1,0 +1,10 @@
+{
+  "parley-client-api.json": {
+    "preferred": "1.2.0",
+    "versions": {
+      "1.2.0": {
+        "swaggerUrl": "swagger-files\\parley-client-api.json"
+      }
+    }
+  }
+}

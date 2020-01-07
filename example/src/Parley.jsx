@@ -1,20 +1,10 @@
 const React = require('react');
 const PropTypes = require('prop-types');
-
 const extensions = require('../../packages/oas-extensions/');
-
 const withSpecFetching = require('./SpecFetcher');
-
 const ApiExplorer = require('../../packages/api-explorer/src');
-// const Logs = require('../../packages/api-logs/index');
-const ApiList = require('./ApiList');
-
-require('../../example/swagger-files/types.json');
-require('../../example/swagger-files/response-schemas.json');
-
 require('../../packages/api-logs/main.css');
 
-// function Demo({ fetchSwagger, status, docs, oas, oauth }) {
 function Demo({ status, docs, oas, oauth }) {
   return (
     <div>
